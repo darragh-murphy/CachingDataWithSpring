@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.darraghmurphy</groupId>
+    <artifactId>CachingDataWithSpring</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <!--
+        Takes an opinionated view of building production-ready Spring applications. Spring Boot favors convention
+        over configuration and is designed to get you up and running as quickly as possible.
+    -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.2.7.RELEASE</version>
+    </parent>
+
+    <properties>
+        <java.version>1.7</java.version>
+    </properties>
+
+    <build>
+        <plugins>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.3</version>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+
+        </plugins>
+    </build>
+
+    <dependencies>
+
+        <!--
+        <dependency>
+            <groupId>net.sf.ehcache</groupId>
+            <artifactId>ehcache</artifactId>
+            <version>2.9.0</version>
+        </dependency>
+        -->
+
+        <!-- Optional, to log stuff -->
+        <!--
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.0.13</version>
+        </dependency>
+        -->
+
+        <!-- Spring caching framework inside this -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>4.1.4.RELEASE</version>
+        </dependency>
+
+        <!-- Spring boot startup -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+            <version>1.2.7.RELEASE</version>
+        </dependency>
+
+        <!-- Support for Ehcache and others -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+            <version>4.1.4.RELEASE</version>
+        </dependency>
+
+    </dependencies>
+
+</project>
