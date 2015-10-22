@@ -49,9 +49,6 @@ public class Application {
 
         System.out.println("Application : " + testName + " . Avg time : " + MathUtil.arithmeticMean(timings) + " " +
                 "nanoseconds");
-
-        /** Avoid JVM warmup penalty */
-        Thread.sleep(1000);
     }
 
     @Component
